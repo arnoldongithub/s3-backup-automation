@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Documents_93316a"
+        },
+        {
+            "name": "Python: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}"
+        },
+        {
+            "name": "Java: Launch Program with Shutdown Hook",
+            "type": "java",
+            "request": "launch",
+            "mainClass": "${file}",
+            "args": [],
+            "console": "integratedTerminal",
+            "stopOnEntry": false,
+            "env": {
+                "JAVA_HOME": "/path/to/your/java/home"
+            },
+            "cwd": "${workspaceFolder}",
+            "vmArgs": "-Djava.security.manager"
+        }
+    ]
+}

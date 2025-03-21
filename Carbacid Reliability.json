@@ -1,0 +1,341 @@
+{
+    "schemaVersion": "2021-11-01",
+    "name": "Carbacid EDR WAR",
+    "description": "Carbacid Custom Lens",
+    "pillars": [
+        {
+            "id": "pillar_id_3",
+            "name": "Reliability",
+            "questions": [
+                {
+                    "id": "pillar_3_q1",
+                    "title": "My first question",
+                    "description": "How to ensure the availability of disaster recovery resources during failover events",
+                    "choices": [
+                        {
+                            "id": "choice1",
+                            "title": "Leveraging Amazon Route 53 for DNS failover",
+                            "helpfulResource": {
+                                "displayText": "Use Route 53 DNS failover to route traffic during disaster events.",
+                                "url": "https://aws.amazon.com/route53/"
+                            },
+                            "improvementPlan": {
+                                "displayText": "Implement Amazon Route 53 DNS failover for disaster recovery resources, ensuring that traffic is automatically routed to a healthy failover site during outages."
+                            }
+                        },
+                        {
+                            "id": "choice2",
+                            "title": "Deploying disaster recovery resources across multiple Availability Zones (AZs)",
+                            "helpfulResource": {
+                                "displayText": "Deploy disaster recovery resources across multiple AZs.",
+                                "url": "https://aws.amazon.com/rds/details/multi-az/"
+                            },
+                            "improvementPlan": {
+                                "displayText": "Ensure that disaster recovery instances are deployed across at least two Availability Zones to provide fault tolerance and minimize risk of service outages."
+                            }
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "choice1 && choice2",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "choice1 && !choice2",
+                            "risk": "MEDIUM_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "HIGH_RISK"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+{
+    "schemaVersion": "2021-11-01",
+    "name": "Carbacid EDR WAR",
+    "description": "Carbacid Custom Lens",
+    "pillars": [
+        {
+            "id": "pillar_id_3",
+            "name": "Reliability",
+            "questions": [
+                {
+                    "id": "pillar_3_q2",
+                    "title": "My second question",
+                    "description": "What redundancy mechanisms have been put to ensure disaster recovery resources are not dependent on a single point of failure",
+                    "choices": [
+                        {
+                            "id": "choice1",
+                            "title": "Implementing cross-region replication for critical resources",
+                            "helpfulResource": {
+                                "displayText": "Use cross-region replication to replicate critical data and resources across multiple regions.",
+                                "url": "https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html"
+                            },
+                            "improvementPlan": {
+                                "displayText": "Set up cross-region replication for disaster recovery resources, such as S3 buckets, to ensure availability even if one region is compromised."
+                            }
+                        },
+                        {
+                            "id": "choice2",
+                            "title": "Deploy disaster recovery resources across multiple AZs.",
+                            "helpfulResource": {
+                                "displayText": "Deploy disaster recovery resources across multiple AZs.",
+                                "url": "https://aws.amazon.com/rds/details/multi-az/"
+                            },
+                            "improvementPlan": {
+                                "displayText": "Ensure that disaster recovery instances are deployed across at least two Availability Zones to provide fault tolerance and minimize risk of service outages."
+                            }
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "choice1 && choice2",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "choice1 && !choice2",
+                            "risk": "MEDIUM_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "HIGH_RISK"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+{
+    "schemaVersion": "2021-11-01",
+    "name": "Carbacid EDR WAR",
+    "description": "",
+    "pillars": [
+        {
+            "id": "pillar_id_3",
+            "name": "Pillar 3",
+            "questions": [
+                {
+                    "id": "pillar_3_q3",
+                    "title": "My third question",
+                    "description": "Using RDS Multi-AZ for disaster recovery databases",
+                    "choices": [
+                        {
+                            "id": "choice1",
+                            "title": "How to manage backup and recovery strategies to ensure data durability and availability during a disaster",
+                            "helpfulResource": {
+                                "displayText": "Use AWS Backup to automate and schedule backups..",
+                                "url": "https://aws.amazon.com/backup/"
+                            },
+                            "improvementPlan": {
+                                "displayText": "Implement AWS Backup to ensure that all critical data is backed up regularly, with automated scheduling and compliance reporting."
+                            }
+                        },
+                        {
+                            "id": "choice2",
+                            "title": "Ensuring backup data is stored across multiple regions",
+                            "helpfulResource": {
+                                "displayText": "Store backups in multiple AWS regions for disaster recovery readiness.",
+                                "url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html"
+                            },
+                            "improvementPlan": {
+                                "displayText": "Set up cross-region backups for disaster recovery data, ensuring that a backup copy is always available even if one region experiences an outage."
+                            }
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "choice1 && choice2",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "choice1 && !choice2",
+                            "risk": "MEDIUM_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "HIGH_RISK"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+{"
+schemaVersion": "2021-11-01",
+    "name": "Carbacid EDR WAR",
+    "description": "",
+    "pillars": [
+        {
+            "id": "pillar_id_3",
+            "name": "Pillar 3",
+            "questions": [
+                {
+                    "id": "pillar_3_q4",
+                    "title": "My fourth question",
+                    "description": "Which mechanisms can be used to track and manage operational changes for disaster recovery resources",
+                    "choices": [
+                        {
+                            "id": "choice1",
+                            "title": "Tracking changes using AWS Config",
+                            "helpfulResource": {
+                                "displayText": "Use AWS Config to track configuration changes.",
+                                "url": "https://aws.amazon.com/config/"
+                            },
+                            "improvementPlan": {
+                                "displayText": "Set up AWS Config to record changes to all disaster recovery resources, ensuring that any modifications are tracked and can be reviewed in case of an issue."
+                            }
+                        },
+                        {
+                            "id": "choice2",
+                            "title": "Configuring Elastic Load Balancing to distribute traffic during disaster recovery",
+                            "helpfulResource": {
+                                "displayText": "Use ELB to distribute disaster recovery traffic across instances.",
+                                "url": "https://aws.amazon.com/elasticloadbalancing/"
+                            },
+                            "improvementPlan": {
+                                "displayText": "Set up Elastic Load Balancing to distribute traffic between disaster recovery instances, ensuring that no single instance becomes overloaded during failover."
+                            }
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "choice1 && choice2",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "choice1 && !choice2",
+                            "risk": "MEDIUM_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "HIGH_RISK"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+{"
+schemaVersion": "2021-11-01",
+"name": "Carbacid EDR WAR",
+"description": "",
+"pillars": [
+    {
+        "id": "pillar_id_3",
+        "name": "Pillar 3",
+        "questions": [
+            {
+                "id": "pillar_3_q5",
+                "title": "My fifth question",
+                "description": "How to ensure that operational insights are available for continuous monitoring and automatic healing of disaster recovery systems",
+                "choices": [
+                    {
+                        "id": "choice1",
+                        "title": "Using Amazon CloudWatch Alarms to detect failures in disaster recovery systems",
+                        "helpfulResource": {
+                            "displayText": "Set up CloudWatch alarms to monitor disaster recovery system health.",
+                            "url": "https://aws.amazon.com/cloudwatch/"
+                        },
+                        "improvementPlan": {
+                            "displayText": "Configure CloudWatch Alarms to trigger alerts or automated recovery actions in response to performance metrics, ensuring that recovery systems can respond to issues quickly."
+                        }
+                    },
+                    {
+                        "id": "choice2",
+                        "title": "Using AWS Systems Manager to automate operational tasks",
+                        "helpfulResource": {
+                            "displayText": "Automate operational tasks using Systems Manager.",
+                            "url": "https://aws.amazon.com/systems-manager/"
+                        },
+                        "improvementPlan": {
+                            "displayText": "Use AWS Systems Manager Automation to schedule regular maintenance and automated tasks for disaster recovery systems, reducing the need for manual intervention."
+                        }
+                    }
+                ],
+                "riskRules": [
+                    {
+                        "condition": "choice1 && choice2",
+                        "risk": "NO_RISK"
+                    },
+                    {
+                        "condition": "choice1 && !choice2",
+                        "risk": "MEDIUM_RISK"
+                    },
+                    {
+                        "condition": "default",
+                        "risk": "HIGH_RISK"
+                    }
+                ]
+            }
+        ]
+    }
+]
+}
+
+{   
+"schemaVersion": "2021-11-01",
+"name": "Carbacid EDR WAR",
+"description": "",
+"pillars": [
+    {
+        "id": "pillar_id_3",
+        "name": "Pillar 3",
+        "questions": [
+            {
+                "id": "pillar_3_q6",
+                "title": "My sixth question",
+                "description": "What failover testing strategies have been put in place to ensure disaster recovery readiness",
+                "choices": [
+                    {
+                        "id": "choice1",
+                        "title": "Regularly testing disaster recovery failover processes",
+                        "helpfulResource": {
+                            "displayText": "Test failover processes regularly to ensure readiness.",
+                            "url": "https://aws.amazon.com/disaster-recovery/"
+                        },
+                        "improvementPlan": {
+                            "displayText": "Implement regular failover testing schedules to ensure that disaster recovery processes are validated and ready for a potential disaster event."
+                        }
+                    },
+                    {
+                        "id": "choice2",
+                        "title": "Leveraging Route 53 for automated failover testing",
+                        "helpfulResource": {
+                            "displayText": "Use Route 53 to perform automated failover testing.",
+                            "url": "https://aws.amazon.com/route53/"
+                        },
+                        "improvementPlan": {
+                            "displayText": "Set up Route 53 to automate disaster recovery failover testing, ensuring that failovers can be tested without manual intervention."
+                        }
+                    }
+                ],
+                "riskRules": [
+                    {
+                        "condition": "choice1 && choice2",
+                        "risk": "NO_RISK"
+                    },
+                    {
+                        "condition": "choice1 && !choice2",
+                        "risk": "MEDIUM_RISK"
+                    },
+                    {
+                        "condition": "default",
+                        "risk": "HIGH_RISK"
+                    }
+                ]
+            }
+        ]
+    }
+]
+}
