@@ -1,1 +1,0 @@
-This is the write commandit allows us to write in a particular file
